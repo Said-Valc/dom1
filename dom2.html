@@ -1,0 +1,42 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>интукод</title>
+</head>
+<body>
+    <div id="main">
+        <ul id="list">
+            <li>html</li>
+            <li>css</li>
+        </ul>
+    </div>
+    <div id="copyright">(c) INTOCODE</div>
+<script>
+    let h1 = document.createElement('h1');
+    h1.textContent = 'Работа с DOM';
+    document.body.prepend(h1)
+    let divMain = document.getElementById('main');
+    let a = document.createElement('a');
+    a.href = 'https://ru.wikipedia.org/wiki/Document_Object_Model';
+    a.href = "DOM";
+    divMain.append();
+    const recolor = (color) => {
+        document.body.style.background = 'red';
+    }
+    const addLiInUl = (text) => {
+        let list = document.getElementById('list');
+        let li = document.createElement('li');
+        li.textContent = text;
+        list.append(li);
+    }
+    const removeCopyright = () =>{
+        let copy = document.getElementById("copyright")
+        copy.remove();
+    }
+    removeCopyright();
+</script>
+<!--Ответьте на вопрос, почему тег script нужно писать в конце body?
+    Чтоб dom элементы успели загрузиться
+-->
+</body>
+</html>
