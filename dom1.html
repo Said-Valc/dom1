@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const divFirst = document.createElement('div');
+        divFirst.style.width = '300px';
+        divFirst.style.margin = 'auto';
+        const div = document.createElement('div');
+        div.style.border = '1px solid red';
+        div.style.width = '300px';
+        div.style.padding = '10px';
+        div.style.borderRadius = '10px';
+        div.textContent = "Lorem ipsup dollar lorem ipsum dollar lorem ipsum dollar";
+        document.body.prepend(divFirst);
+        divFirst.append(div);
+        const div2 = document.createElement('div');
+      
+      
+        div2.style.display = 'flex';
+        div2.style.justifyContent = 'space-between';
+        div2.style.margin = 'auto';
+        const divA1 = document.createElement('div');
+        divA1.innerHTML = "<a href='https://google.com'>www</a>";
+        const divA2 = document.createElement('div');
+        divA2.innerHTML = "<a href='#'>eee</a>";
+        const divA3 = document.createElement('div');
+        divA3.innerHTML = "<a href='#'>rrr</a>";
+        div2.prepend(divA1);
+        div2.prepend(divA2);
+        div2.prepend(divA3);
+        div.after(div2);
+    </script>
+</body>
+</html>
